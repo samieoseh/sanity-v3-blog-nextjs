@@ -11,6 +11,7 @@ import { client } from "../sanity/lib/client";
 const builder = imageUrlBuilder(client);
 
 export default function Post({ post }: { post: SanityDocument }) {
+  console.log(post);
   return (
     <main className="container mx-auto prose prose-lg p-4">
       <h1>{post?.title ? <h1>{post.title}</h1> : <h1>Untitled</h1>}</h1>
